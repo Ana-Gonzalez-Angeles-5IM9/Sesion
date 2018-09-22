@@ -19,8 +19,7 @@ public class SesionesServlet extends HttpServlet {
 
         String nombre;
         String apellido;
-
-        //recuperamos los datos del formulario
+        
         nombre = request.getParameter("nombre");
         apellido = request.getParameter("contra");
 
@@ -29,7 +28,7 @@ public class SesionesServlet extends HttpServlet {
         sesion.setAttribute("clave", apellido);
 
         response.setContentType("text/html");
-        //Mostramos los  valores en el cliente
+        
         PrintWriter out = response.getWriter();
 
         out.println("<a href=\"/SesionAna/catalogo.jsp\"> Link al catalogo del carrito  </a>");
