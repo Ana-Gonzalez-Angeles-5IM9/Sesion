@@ -59,18 +59,12 @@ public class ValidaSesionesServlet extends HttpServlet {
                 titulo = "llave correcta continua la sesion";
             }else{
                 titulo = "llave incorrecta inicie nuevamente sesion";
-            }
-
-       
-            
+            }   
         } catch (SQLException ex) {
             
             Logger.getLogger(ValidaSesionesServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
-
         
-        
-        //Mostramos los  valores en el cliente
         PrintWriter out = response.getWriter();
         out.println("¿Continua la Sesion y es valida?: " + titulo);
         out.println("<br>");
